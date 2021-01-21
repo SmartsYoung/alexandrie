@@ -1,5 +1,5 @@
 # docker compose version is 3.7 (may work for less, but only tested with 3.7)
-version: "3.7"
+version: "3.6"
 services:
   web:
     # docker build context is the current directory
@@ -24,4 +24,4 @@ services:
     volumes:
       - ${APPDATA}:/home/alex/appdata
       - ./docker/${DATABASE}/alexandrie.toml:/home/alex/alexandrie.toml
-      - ${GIT_SSH_KEY}:/home/alex/.ssh/id_rsa
+      - /root/.ssh/id_rsa:/home/alex/.ssh/id_rsa
